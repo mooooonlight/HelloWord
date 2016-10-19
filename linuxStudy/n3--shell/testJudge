@@ -1,0 +1,16 @@
+if test -f try_var
+then
+    echo "try_var exist"
+fi
+
+if test -f abc.txt
+then
+    echo "abc.txt exist"
+fi
+
+if [ -f try_var ]
+then
+    echo "try_var exist"
+fi
+
+

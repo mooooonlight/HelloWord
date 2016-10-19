@@ -1,0 +1,15 @@
+#!/bin/bash
+echo "is it morning? yes: no"
+read isItMorning
+if [ "$isItMorning" = yes ]
+then
+    echo "morning"
+elif [ "$isItMorning" = no ]
+then
+    echo "afternoon"
+else
+    echo "param is error, enter $isItMorning "
+    exit 1 
+fi
+exit 0
+

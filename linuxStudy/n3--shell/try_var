@@ -1,0 +1,39 @@
+#!/bin/bash
+
+salutation="Hello"
+
+#print var
+echo $salutation
+
+#print $0 -- shell name
+echo "The progame $0 is noe running"
+
+#print first param
+echo "The first param was $1"
+
+#print second param
+echo "The second param was $2"
+
+
+#print all param
+echo "The param list was $*"
+
+#print $HOME
+echo "The use's home dir is $HOME"
+
+echo "Please enter a new greeting"
+read salutation
+
+
+#print the var salutation's new value
+echo $salutation
+
+echo "The script is noe complete"
+
+exit
+
+
+
+
+
+

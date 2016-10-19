@@ -1,0 +1,30 @@
+#!/bin/bash
+
+echo "please enter now time: (exit to exit)"
+read now
+
+while [ "$now" != "exit" ]
+do
+    case $now in
+        mor| m* | Mor|  morning )
+            echo "now is morning"
+            echo "hello morninig"
+            ;;
+        a* | After| Af| afternoon)
+            echo "now is afternoon"
+            echo "hello afternoon"
+            ;;
+        e* | Eve | evenint)
+            echo "now is evening"
+            echo "hello evening "
+            ;; 
+        *    )
+            echo "nothing you enter $now"
+            ;;
+    esac
+    read now
+#    echo "you enter $now"
+done
+exit 0
+ 
+ 

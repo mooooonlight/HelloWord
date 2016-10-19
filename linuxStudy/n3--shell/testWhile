@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "enter passwork: "
+read pwd
+
+while [ "$pwd" != "!s9h3615g"  ]
+do
+    echo "sorry, pwd is err"
+    read pwd
+done  

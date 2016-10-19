@@ -1,0 +1,12 @@
+#! /bin/bash
+if [ -f /bin/bash ]
+then
+    echo "file /bin/bash exist"
+fi
+
+if [ -d /bin/bash ]
+then 
+    echo "/bin/bash is a dir"
+else
+    echo "/bin/bash is not a dir"
+fi
