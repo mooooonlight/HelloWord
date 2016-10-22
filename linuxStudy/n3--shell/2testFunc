@@ -1,0 +1,26 @@
+#!/bin/bash
+
+yes_or_no()
+{
+    echo "is your name $* ?"
+    while true
+    do
+        echo "Enter yes or no: "
+        read x
+        case $x in
+            yes | y| Y |YES| Yes ) return 0;;
+            no | n | N| NO| No ) return 1;;
+            * ) echo "Answer yes or no";;
+        esac
+    done
+}
+
+echo "Original param are $*"
+
+if yes_or_no "$1" 
+then
+    echo "$1 is a nice name!"
+else
+    echo "hehe"
+fi
+exit 0

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+sample_text="global varible"
+foo()
+{
+    local sample_text="local varible"
+    echo "Function foo is execute"
+    echo $sample_text
+}
+echo "script begging"
+echo $sample_text
+
+foo
+
+echo "script endding"
+echo $sample_text
+
+exit 0
