@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo the date is $(date)
+
+set -x $(date)
+
+echo the month is $2
+
+exit 0

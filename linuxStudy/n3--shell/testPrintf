@@ -1,0 +1,5 @@
+#!/bin/bash
+
+printf "%s\n" hello
+
+printf "%s %d\t %s\n" "there" 15 people

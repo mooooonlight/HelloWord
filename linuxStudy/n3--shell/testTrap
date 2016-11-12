@@ -1,0 +1,25 @@
+#!/bin/bash
+
+trap "rm -f ./tmp_$$" INT
+
+echo createing file ./tmp_$$
+
+date > ./tmp_$$
+
+while [ -f ./tmp_$$ ]  
+do
+    echo tmp_$$ exit
+    sleep 2
+done
+
+trap INT
+echo createinf file ./tmp2_$$
+date > ./tmp2_$$
+while [ -f ./tmp2_$$ ] 
+do 
+    echo tmp2_$$ exit
+    sleep 2
+done
+
+echo wo never get there
+exit 0
