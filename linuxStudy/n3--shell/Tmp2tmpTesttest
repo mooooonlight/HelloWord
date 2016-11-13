@@ -1,0 +1,10 @@
+#!/bin/bash
+set -x
+set -e
+
+for testFile in test*
+do 
+    mv "$testFile" "${testFile#test}"test
+done
+
+exit 0
