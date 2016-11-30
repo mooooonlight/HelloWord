@@ -1,0 +1,124 @@
+
+In CDtest line 9:
+current_cd=""
+^-- SC2034: current_cd appears unused. Verify it or export it.
+
+
+In CDtest line 13:
+trap "rm -f $tmp_file" EXIT
+            ^-- SC2064: Use single quotes, otherwise this expands now rather than when signalled.
+
+
+In CDtest line 149:
+    set $(wc -l $temp_file )
+        ^-- SC2046: Quote this to prevent word splitting.
+                ^-- SC2154: temp_file is referenced but not assigned (did you mean 'tmp_file'?).
+                ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In CDtest line 159:
+        cat $temp_file
+            ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In CDtest line 165:
+    read -r cdcatnum cdtitle cdtype cdac < $temp_file
+                                           ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In CDtest line 175:
+    echo Catalog number: $cdcatnum
+                         ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In CDtest line 176:
+    echo Title: $cdtitle
+                ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In CDtest line 177:
+    echo Tpe: $cdtype
+              ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In CDtest line 178:
+    echo Artlist/Composer: $cdac
+                           ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In CDtest line 201:
+    if [ -n "$cdatnum" ];then
+             ^-- SC2154: cdatnum is referenced but not assigned (did you mean 'cdcatnum'?).
+
+
+In CDtest line 207:
+            grep -v "^${cdcatnum}," $tracks_file > $temp_file
+                                                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In CDtest line 208:
+            mv $temp_file $tracks_file
+               ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In CDtest line 218:
+    set ${wc -l $title_file}
+        ^-- SC2154: wc is referenced but not assigned (for output from commands, use "$(wc ...)" ).
+        ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In CDtest line 221:
+    set ${wc -l $tracks_file}
+        ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In CDtest line 224:
+    echo found $num_titles CDs, with a total of $num_tracks tracks
+               ^-- SC2086: Double quote to prevent globbing and word splitting.
+                                                ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In CDtest line 238:
+            grep -v "^${cdcatnum}," $title_file > $temp_file
+                                                  ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In CDtest line 239:
+            mv $temp_file $title_file
+               ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In CDtest line 240:
+            grep -v "^${cdcatnum}," $tracks_file > $temp_file
+                                                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In CDtest line 241:
+            mv $temp_file $tracks_file
+               ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In CDtest line 255:
+        grep "^${cdcatnum}," $tracks_file > $temp_file
+                                            ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In CDtest line 258:
+            echo no tracks found for $cdtitle
+                                     ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In CDtest line 263:
+            cut -f 2- -d , $temp_file
+                           ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In CDtest line 272:
+rm -f $temp_file
+      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In CDtest line 312:
+rm -f $temp_file
+      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
