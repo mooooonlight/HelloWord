@@ -1,0 +1,6 @@
+project(Simple_Write_Cmake)
+message(gcy_test_bin_dir:   ${PROJECT_BINARY_DIR})
+message(gcy_test_source_dir:${PROJECT_SOURCE_DIR})
+set(SRC_LIST ../simple_write.c)
+message(gcy_test_SRC_LIST: ${SRC_LIST})
+add_executable(simple_write_cmake ${SRC_LIST})
