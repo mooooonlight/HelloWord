@@ -1,0 +1,8 @@
+project(1001)
+SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g")
+message(gcy_test_bin_dir:   ${PROJECT_BINARY_DIR})
+message(gcy_test_source_dir:${PROJECT_SOURCE_DIR})
+set(SRC_LIST ../1001.c)
+message(gcy_test_SRC_LIST: ${SRC_LIST})
+add_executable(1001  ${SRC_LIST})
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/../)
