@@ -1,0 +1,22 @@
+forword stack:
+
+back stack:
+
+
+BACK: push to forward;  pop from back;  back is empty, ignore
+FORWARD: push to back;  pop from forward; forward is empty, ignore.
+VISIT: push to back;  forward is empty
+
+
+back:
+ash
+acm
+
+for:
+bay
+
+
+acm->ash>ibm
+
+
+

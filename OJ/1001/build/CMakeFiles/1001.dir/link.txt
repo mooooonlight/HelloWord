@@ -1,0 +1,1 @@
+/usr/bin/cc   -g   CMakeFiles/1001.dir/usr/gcy/git/OJ/1001/1001.c.o  -o /usr/gcy/git/OJ/1001/1001 -rdynamic 
