@@ -1,6 +1,6 @@
 SET(CMAKE_CXX_COMPILER "g++")
 project(1028)
-SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ")
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
 message(gcy_test_bin_dir:   ${PROJECT_BINARY_DIR})
 message(gcy_test_source_dir:${PROJECT_SOURCE_DIR})
 #set(SRC_LIST ../*)
